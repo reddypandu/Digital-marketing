@@ -62,7 +62,8 @@
 }
 .fa-angle-down,.fa-angle-up{
     float: right;
-    font-size: 1.3rem;
+    font-size: 1rem;
+    margin-top: 0.2rem;
 }
 .selected-country {
     padding: 5px;
