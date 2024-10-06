@@ -19,7 +19,9 @@ Description: This Template is created for Youtubers
 .text-primary {
   color: var(--primary) !important;
 }
-
+.logo img{
+  width: 100px;
+}
 /* ===================================== Basic CSS ==================================== */
 * {
   margin: 0px;
