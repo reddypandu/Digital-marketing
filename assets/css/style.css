@@ -226,6 +226,12 @@ body {
   font-weight: 700;
   color: #444;
 }
+.cp{
+  background-color: #0408a4;
+  color:#fff;
+  padding: 0.4rem;
+  border-radius: 20%;
+}
 @media screen and (max-width: 600px) {
   .page-nav h2 {
     font-size: 26px;
@@ -555,6 +561,9 @@ color: var(--primary);
   .carousel-caption .text-start {
     text-align: center !important;
   }
+}
+.carousel-item img{
+text-align: center;
 }
 @media screen and (max-width: 991px) {
   .carousel-item {
