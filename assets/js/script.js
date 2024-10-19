@@ -92,32 +92,37 @@ $('#typewriteText').typewrite({
   });
 
 
-  const selectedCountry = document.querySelector(".selected-country");
-const countryList = document.querySelector(".country-list");
-const angleIcon = selectedCountry.querySelector("i");
+  const selectedCountries = document.querySelectorAll(".selected-country");
+const countryLists = document.querySelectorAll(".country-list");
 
-selectedCountry.addEventListener("click", () => {
-    const isOpen = countryList.style.display === "block";
-    countryList.style.display = isOpen ? "none" : "block";
-    angleIcon.classList.toggle("fa-angle-down", isOpen);
-    angleIcon.classList.toggle("fa-angle-up", !isOpen);
+selectedCountries.forEach((selectedCountry, index) => {
+    const countryList = countryLists[index];
+    const angleIcon = selectedCountry.querySelector("i");
+
+    selectedCountry.addEventListener("click", () => {
+        const isOpen = countryList.style.display === "block";
+        countryList.style.display = isOpen ? "none" : "block";
+        angleIcon.classList.toggle("fa-angle-down", isOpen);
+        angleIcon.classList.toggle("fa-angle-up", !isOpen);
+    });
+
+    countryList.addEventListener("click", (event) => {
+        if (event.target.tagName === "A") {
+            selectedCountry.firstChild.textContent = event.target.textContent;
+            countryList.style.display = "none";
+            angleIcon.classList.remove("fa-angle-up");
+            angleIcon.classList.add("fa-angle-down");
+        }
+    });
+
+    document.addEventListener("click", (event) => {
+        if (!selectedCountry.contains(event.target) && !countryList.contains(event.target)) {
+            countryList.style.display = "none";
+            angleIcon.classList.remove("fa-angle-up");
+            angleIcon.classList.add("fa-angle-down");
+        }
+    });
 });
 
-countryList.addEventListener("click", (event) => {
-    if (event.target.tagName === "a") {
-        selectedCountry.firstChild.textContent = event.target.textContent;
-        countryList.style.display = "none";
-        angleIcon.classList.remove("fa-angle-up");
-        angleIcon.classList.add("fa-angle-down");
-    }
-});
-
-document.addEventListener("click", (event) => {
-    if (!selectedCountry.contains(event.target) && !countryList.contains(event.target)) {
-        countryList.style.display = "none";
-        angleIcon.classList.remove("fa-angle-up");
-        angleIcon.classList.add("fa-angle-down");
-    }
-});
 
 
