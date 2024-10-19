@@ -108,7 +108,9 @@ p {
   font-size: 13px;
   opacity: 0.5 !important;
 }
-
+.hed-top .top-social a{
+  color: #fff;
+}
 .container-fluid {
   padding: 0px;
 }
