@@ -601,3 +601,40 @@ text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */
+.keywords {
+  color: #fff;
+  padding: 20px 40px;
+}
+
+.keywords .keywords-column {
+  margin-block: 1rem;
+}
+
+.keywords .keywords-column h3 {
+  border-bottom: 2px solid #ff5254;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  color: #ff5254;
+  width: fit-content;
+}
+
+.keywords .keywords-column ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.keywords .keywords-column li {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.keywords .keywords-column a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.keywords .keywords-column a:hover {
+  text-decoration: underline;
+}
