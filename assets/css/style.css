@@ -1,13 +1,13 @@
 /* =======================================================================
 Template Name: Youtubers
 Author:  SmartEye Technologies
-Author URI: www.smarteyeapps.com
+Author URI: www.smarteyeappsarstechno.com
 Version: 1.0
 coder name:Prabin Raja
 Description: This Template is created for Youtubers
 ======================================================================= */
 /* ===================================== Import Variables ================================== */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapisarstechno.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 .bg-primary {
   background-color: var(--primary) !important;
 }
@@ -632,7 +632,7 @@ text-align: center;
 .keywords .keywords-column a {
   color: #fff;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .keywords .keywords-column a:hover {
