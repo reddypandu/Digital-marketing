@@ -304,6 +304,164 @@ height: 100vh;
         object-fit: cover;
     }
 </style>
+
+<div id="pop-up-form">
+    <div class="embed-popup-form">
+        <div class="proposal-popup">
+            <i class="fa fa-close" aria-hidden="true"></i>
+            <!-- Free Proposal Form -->
+            <form class="fp-form" action="/thank-you" method="POST">
+                <span class="h2 text-center">GET IN TOUCH</span>
+                <div class="form-mid row">
+                    <div class="col-12 mb-2">
+                        <input type="text" class="form-control" name="name"
+                            placeholder="First Name*" required="">
+                    </div>
+                    <div class="col-12 mb-2">
+                        <input type="tel" class="form-control" name="phone"
+                            placeholder="Phone*" required="">
+                    </div>
+                    <div class="col-12 mb-2">
+                        <input type="email" class="form-control" name="email"
+                            placeholder="Email*"
+                            data-parsley-error-message="Please enter a valid email address"
+                            data-parsley-trigger="change" required="">
+                    </div>
+                    <div class="col-12">
+                        <textarea type="text" class="form-control" name="message"
+                            placeholder="Message" data-parsley-website-check=""
+                            pattern="^(?!.*t[i1][k]?\W*t[o0]k).*"></textarea>
+                    </div>
+
+                    <div class="col-12">
+                        <input type="hidden" name="lead_formname" value="">
+                        <input type="hidden" name="lead_language" value="en">
+                        <input type="hidden" name="lead_formtype" value="">
+                        <button type="submit"
+                            class="form-control btn fp-btn fp-btn-orange fp-btn-shadow">
+                            SUBMIT</button>
+                    </div>
+                </div>
+            </form>
+            <!-- End of Form -->
+        </div>
+    </div>
+</div>
+
+<style>
+    #pop-up-form{
+        position: fixed;
+        top:60%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+z-index: 999;
+background-color: #ff5254;
+    }
+    #pop-up-form span.h2{
+        color: white;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        font-size: 1.5rem;
+        padding: 1rem 0;
+    }
+    #pop-up-form i{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: white;
+        cursor: pointer;
+    }
+.fp-btn {
+    border: 0;
+ 
+    text-transform: uppercase;
+    border-radius: 4px;
+    box-shadow: none;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 2px;
+    font-weight: 700;
+    letter-spacing: 2.4px;
+    text-align: center;
+    padding: 24px;
+    white-space: normal;
+    box-shadow: 0 12px 18px 0 rgba(0, 0, 0, 0.15);
+    margin-top: 0.2rem;
+}
+
+.fp-btn:focus {
+    outline: 0;
+}
+
+.fp-btn.fp-btn-orange {
+    color: #ffffff;
+    background-color: #0521b3;
+}
+
+.proposal-popup {
+    padding: 15px 10px;
+    max-width: 570px;
+    width: 100%;
+}
+
+.quote {
+    position: relative;
+}
+
+.quote #pop-up-form {
+    position: absolute;
+    top: 120%;
+    background: linear-gradient(180deg, #427fdb 0%, #396bb1 100%);
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.35);
+    /* display: none; */
+}
+
+.quote #pop-up-form.active {
+    display: block;
+}
+
+.fp-form .h2 {
+    color: #fff;
+    text-align: center;
+
+}
+
+.quote #pop-up-form::before {
+    content: "";
+    position: absolute;
+    border-bottom: 7px solid #427fdb;
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+
+    margin: 0 6px;
+
+    top: -7px;
+    left: 50%;
+}
+</style>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const popupForm = document.querySelector("#pop-up-form");
+        const closeBtn = document.querySelector("#pop-up-form i.fa-close");
+    
+        // Hide the popup initially
+        popupForm.style.display = "none";
+    
+        // Show the popup after 5 seconds
+        setTimeout(function () {
+            popupForm.style.display = "block";
+        }, 5000); // 5000ms = 5 seconds
+    
+        // Close the popup when the close button is clicked
+        closeBtn.addEventListener("click", function () {
+            popupForm.style.display = "none";
+        });
+    });
+    </script>
+    
+    
+
         <!--  ************************* About US Start Here ************************** -->
 
         <section class="about-us big-padding container-fluid">
