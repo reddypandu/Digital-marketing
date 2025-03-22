@@ -16,6 +16,7 @@ Description: This Template is created for Youtubers
   --light:#fff;
   --dark:#000;
 }
+
 .text-primary {
   color: var(--primary) !important;
 }
@@ -641,4 +642,16 @@ text-align: center;
 
 .keywords .keywords-column a:hover {
   text-decoration: underline;
+}
+#menu-jk{
+  background: black !important;
+}
+#menu-jk .bg-white{
+  background: black !important;
+}
+#menu-jk a{
+  color: #fff ;
+}
+footer.bg-dark{
+  background: black !important;
 }
